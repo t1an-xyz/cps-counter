@@ -19,7 +19,9 @@ function timer() {
 }
 
 function addClick() {
-    if (!startTime) {
+    if (!active) {
+        document.getElementById('timer').innerText = 0.0;
+        document.getElementById('counter').innerText = 0;
         startTime = Date.now();
         active = true;
         myInterval = setInterval(timer, 100);
